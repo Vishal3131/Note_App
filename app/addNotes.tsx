@@ -67,7 +67,7 @@ export default function AddNoteScreen({  }) {
       <TextInput
         placeholder="Description"
         multiline
-        style={[styles.input, { height: 120 }]}
+        style={[styles.input, { height: 60 }]}
         value={desc}
         onChangeText={setDesc}
       />

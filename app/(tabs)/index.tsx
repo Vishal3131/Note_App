@@ -44,7 +44,7 @@ export default function HomeScreen() {
 
   return (
    <SafeAreaView style={{flex:1}}> 
-    <View style={{ flex: 1, padding: 40 }}>
+    <View style={{ flex: 1, padding: 20 }}>
       <Text style={styles.title}>My Notes</Text>
 
  {/* Notes List */}
