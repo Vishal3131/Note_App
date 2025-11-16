@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from 'react';
 import { Button, StyleSheet, TextInput, View } from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 interface data{ id: string; title: string; desc: string; }
 
@@ -54,6 +55,7 @@ export default function AddNoteScreen({  }) {
 
 
   return (
+    <SafeAreaView style={{flex:1, padding:20}}> 
     <View style={styles.container}>
       <TextInput
         placeholder="Title"
@@ -72,6 +74,7 @@ export default function AddNoteScreen({  }) {
 
       <Button title="Save Note" onPress={addNote} />
     </View>
+    </SafeAreaView>
   );
 }
 

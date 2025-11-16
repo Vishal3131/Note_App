@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 interface data{ id: string; title: string; desc: string; }
 
@@ -42,7 +43,8 @@ export default function HomeScreen() {
 
 
   return (
-    <View style={{ flex: 1, padding: 20 }}>
+   <SafeAreaView style={{flex:1}}> 
+    <View style={{ flex: 1, padding: 40 }}>
       <Text style={styles.title}>My Notes</Text>
 
  {/* Notes List */}
@@ -70,6 +72,7 @@ export default function HomeScreen() {
         <Text style={styles.plus}>+</Text>
       </TouchableOpacity>
     </View>
+    </SafeAreaView>
   );
 }
 
